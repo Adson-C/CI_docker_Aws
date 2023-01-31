@@ -12,7 +12,6 @@ jobs:
       with:
     # Artifact name
         name: programa
-    - uses: actions/checkout@v3
     
     - name: Deploy to Staging server
       uses: easingthemes/ssh-deploy@main
@@ -39,3 +38,4 @@ jobs:
           export PORT=8000
           chmod +x main
           nohup ./main > nohup.out 2> nohup.err < /dev/null & 
+          - uses: actions/checkout@v3
